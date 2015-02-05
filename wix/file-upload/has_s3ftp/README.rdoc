@@ -1,0 +1,80 @@
+== HAS_S3FTP
+
+== DESCRIPTION
+
+A mini FTP server that persists all data to S3
+
+== INSTALLATION:
+  gem install has_s3ftp
+
+== SETUP
+
+=== Step 1
+
+Upload a file called "passwd" to your S3 bucket. It should contain a single line per user and be a CSV. It should looks something like this
+
+  user1,password,y
+  user2,password,n
+
+the third column indicates the users administrator status. Administrators can see all files. Regular users are sandboxed to their own directory.
+
+=== Step 2
+
+The first time that you run the gem, it will ask you the following data:
+
+  aws-key - your s3 key
+  aws-secret - your s3 secret
+  aws-bucket - bucket where it going to save the data upload by ftp
+  notification(y/n) - set it as yes if you want get error notification in your email. It just support SendGrid Account.
+  sendgrid username - your sendgrid account
+  sendgrid password - your sendigrid password
+  email - your email for error notification
+
+and it will save the data in the file
+
+  HOME_USER/.has_s3ftp/config
+
+IMPORTANT: For all step you need to be root
+
+== START SERVER:
+
+You have to run the follow command as root user:
+
+  root# has_s3ftp start
+
+== STOP SERVER:
+
+You have to run the follow command as root user:
+
+  root# has_s3ftp stop
+
+
+== AUTHORS:
+
+* Kyle J. Ginavan.
+* Mauro Torres - http://github.com/chebyte
+
+== LICENSE:
+
+MIT License
+
+Copyright (c) 2010 Kyle J. Ginavan
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

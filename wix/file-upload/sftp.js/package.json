@@ -1,0 +1,29 @@
+{
+  "name": "sftp.js"
+, "description": "simple sftp library for node"
+, "author": "Action.IO"
+, "version": "0.0.1"
+, "private": true
+, "main": "./index"
+, "dependencies": {
+    "coffee-script"      : "1.6.x"
+  , "async"              : "0.2.x"
+  , "underscore"         : "1.4.x"
+  , "tmp"                : "0.0.x"
+  , "pty.js"             : "0.2.x"
+  }
+, "devDependencies": {
+    "mocha"        : "1.9.x"
+  , "sinon"        : "1.6.x"
+  , "chai"         : "1.5.x"
+  , "sinon-chai"   : "2.3.x"
+  }
+, "engines": {
+    "node"         : "0.8.x"
+  , "npm"          : "1.2.x"
+  }
+, "scripts": {
+    "test": "make test"
+  }
+}
+

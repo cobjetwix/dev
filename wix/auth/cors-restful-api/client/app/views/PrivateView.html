@@ -1,0 +1,9 @@
+<div class="container" ng-init="getUserCollection()">
+	<h2>Hooray!</h2>
+
+	<legend>You</legend>
+	<p>{{AuthenticationModel.user.username}}</p>
+
+	<legend>Users</legend>
+	<p ng-repeat="user in PrivateModel.collection">{{user.username}}</p>
+</div>

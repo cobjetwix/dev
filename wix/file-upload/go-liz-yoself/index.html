@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>go liz yoself</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    body { font-family: monospace; background: magenta; }
+    h1, h2, input, img, p, button { display: block; margin: 20px; }
+    small { display: block; font-style: italic; }
+    img { max-width: 100%; }
+    a { color: blue; text-decoration: none; }
+	#content { background: yellow; width: 600px; margin: 20px auto; padding: 0 30px; border: 10px solid lime; }
+  </style>
+</head>
+
+<body>
+
+
+  <div id="content">
+
+  	<h1>GO LIZ YOSELF <small>~*magically turn yourself into a lizard*~</small></h1>
+
+    <input type="file" id="upload" />
+	
+    <img id="image" />
+
+    <h2 id="happy-birthday"></h2>
+
+    <button id="submit">go liz yoself</button>
+
+    <p><a href="http://twitter.com/jennschiffer">@jennschiffer</a> for <a href="http://twitter.com/doeg">@doeg</a></p>
+  </div>
+
+<script type="text/javascript">
+  window.onload = function(){
+
+  	var DOM = {
+      upload : document.getElementById('upload'),
+      image : document.getElementById('image'),
+      message : document.getElementById('happy-birthday'),
+      button : document.getElementById('submit')
+  	};
+
+  	DOM.upload.onchange = function(){
+  	  DOM.message.innerText = '';
+  	  var uploadedImage = DOM.upload.files[0];
+  	  var reader = new FileReader();
+      reader.onload = function(e){
+      	var dataUri = e.target.result;
+        DOM.image.src = dataUri;
+      };
+      reader.readAsDataURL(uploadedImage);
+  	}
+
+  	DOM.button.onclick = function(){
+  	  var randomLiz = Math.floor(Math.random() * 6 + 1);
+  	  DOM.image.src = 'lizards/' + randomLiz + '.jpg';
+  	  DOM.message.innerText = 'consider yourself liz\'d';
+  	}
+  };
+</script>
+</body>
+</html>

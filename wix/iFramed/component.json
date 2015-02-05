@@ -1,0 +1,9 @@
+{
+	"name": "iFramed",
+	"description": "An extremely simple component to tell you if you are in an iFrame",
+	"repo": "Wizcorp/iFramed",
+	"version": "0.1.0",
+	"scripts": [
+		"index.js"
+	]
+}

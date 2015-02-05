@@ -1,0 +1,35 @@
+<div class="container">
+	
+	<div ng-show="AuthenticationModel.errorMessage" class="alert alert-error">
+		{{AuthenticationModel.errorMessage}}
+	</div>
+
+	<form class="form-horizontal" ng-submit="signIn(username, password)">
+		<legend>Sign in</legend>
+		
+		<div class="control-group">
+			<label class="control-label" for="inputUsername">Username</label>
+			<div class="controls">
+				<input type="text" id="inputUsername" placeholder="Username" ng-model="username" required>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Password</label>
+			<div class="controls">
+				<input type="password" id="inputPassword" placeholder="Password" ng-model="password" required>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<div class="controls">
+				<button type="submit" class="btn btn-primary">Sign in</button>
+			</div>
+		</div>  
+	</form>
+
+	<div class="well">
+		<legend>Or sign in with...</legend>
+		<button class="btn btn-info" ng-click="signInFacebookRequestToken()">Facebook</button>
+	</div>
+</div>
