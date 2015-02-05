@@ -1,7 +1,7 @@
 Resource Server
 ==================
 
-This is a resource server example. PORT = 8001
+This is a resource server example.
 
 # Installation
 

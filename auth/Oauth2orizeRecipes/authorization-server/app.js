@@ -16,8 +16,6 @@ var fs = require('fs');
 var expressSession = require("express-session");
 var path = require('path');
 
-var PORT = 8001;
-
 //Pull in the mongo store if we're configured to use it
 //else pull in MemoryStore for the session configuration
 var sessionStorage;
@@ -124,6 +122,7 @@ var options = {
 };
 
 // Create our HTTPS server listening on port 3000.
-https.createServer(options, app).listen(PORT);
-console.log("OAuth 2.0 Authorization Server started on port : ", PORT);
+https.createServer(options, app).listen(3000);
+console.log("OAuth 2.0 Authorization Server started on port 3000");
+
 
