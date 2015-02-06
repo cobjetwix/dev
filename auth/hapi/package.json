@@ -1,0 +1,19 @@
+{
+  "name": "auth",
+  "version": "0.1.0",
+  "description": "Server Side Authentication",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^0.8.1",
+    "good": "^5.1.1",
+    "good-console": "^4.1.0",
+    "hapi": "^8.1.0",
+    "hapi-auth-basic": "^2.0.0",
+    "tv": "^4.0.0"
+  }
+}
