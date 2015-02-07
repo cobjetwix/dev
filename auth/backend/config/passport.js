@@ -46,7 +46,7 @@ module.exports = function(passport) {
         if (email)
             email = email.toLowerCase(); // Use lower-case e-mails to avoid case-sensitive e-mail matching
             if (!emailValidate.validate(email)) // https://www.npmjs.com/package/email-validator¬
-              return done(null, false, req.flash('signupMessage', 'Please enter a valid email address.'));
+              return done(null, false, req.flash('loginMessage', 'Please enter a valid email address.'));
 
         // asynchronous
         process.nextTick(function() {
